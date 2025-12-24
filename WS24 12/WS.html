@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WS Heading</title>
+
+<style>
+        body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        line-height:1.0;
+        margin: 20px 100px;
+        padding: 0px;
+        }
+        .content{
+        width: 80%;
+        margin: 0 auto;
+        padding: 20px;
+        font-family: 'Arial', sans-serif;
+        }
+        .card {
+        background-color: #ffffff;
+        border-radius: 8px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+        padding: 24px;
+        margin: 20px auto;
+        width: 90%;
+        max-width: 800px;
+        border-top: 5px solid #127ca7;
+        font-family: 'Sarabun', sans-serif;
+        line-height: 1.6;
+        }
+        pre {
+        background-color: #f4f4f4;
+        border-left: 5px solid #127ca7;
+        padding: 15px 20px;
+        margin: 15px 0;
+        font-family: 'Courier New', Courier, monospace;
+        font-size: 14px;
+        line-height: 1.5;
+        color: #333;
+        overflow-x: auto;
+        font-weight: bold;
+        }
+        .note{
+        border-left: 3px solid rgb(177, 177, 177);
+        color: rgb(107, 107, 107);
+        font-size: 14px;
+        }
+        .note::before{
+        content:"💡 ";
+        }
+        a{
+        text-decoration :none;
+        color: #000000;
+        }
+        a:hover{
+        text-decoration:none ;
+        color: #127ca7;
+    
+        }
+        footer{
+        margin: bottom 20px; ;
+        }
+
+</style>
+
+</head>
+<body>
+        <div class="content">
+        <header>
+            <h1 align="center"style="color:#127ca7;">Workshop: HTML Heading</h1>
+            <p align="center">ฝึกใช้แท็ก&lth1&gt - &lth6&gt และการปรับขนาดหัวข้อด้วย css</p>
+        </header>
+        <main>
+            <!--Card1-->
+            <div class="card">
+            <h2>1. ความหมายของ Headings (H1–H6)</h2>
+            <p>HTML มีหัวข้อทั้งหมด 6 ระดับ</p>
+            <ul>
+                <li> H1 – หัวข้อใหญ่สุด ใช้สำหรับชื่อหน้าเว็บหรือหัวข้อหลัก</li>
+                <li> H2 – หัวข้อรองแบ่ง Section ของเนื้อหา</li>
+                <li> H3 – หัวข้อย่อยภายใน H2</li>
+                <li> H4 – ย่อยลงไปอีกระดับ</li>
+                <li> H5 – ใช้น้อยแต่เน้นลำดับข้อมูล</li>
+                <li> H6 – เล็กสุดใช้กับหัวข้อระดับลึก</li>
+            </ul>
+            <p class="note">H1 ควรมีเพียง 1 อันในแต่ละหน้า เพื่อช่วย SEO และโครงสร้างเอกสาร</p>
+            </div>
+            <!--Card2-->
+            <div class="card">
+            <h2>2. ตัวอย่างการใช ้H1–H6</h2>
+<pre>&gt;Welcome to My Website&lt;/h1&gt;
+&lt;h2&gt;HTML Basics&lt;/h2&gt;
+&lt;h3&gt;What is HTML?&lt;/h3&gt;
+&lt;h4&gt;HTML Syntax&lt;/h4&gt;
+&lt;h5&gt;Example Code&lt;/h5&gt;
+&lt;h6&gt;Note: Case Sensitive&lt;/h6&gt;
+</pre>
+            <p>เมื่อแสดงผลจะได้ขนาดลดหลั่นแบบนี้ :</p>
+            <h1>H1: Welcome to My Website</h1>
+            <h2>H2: HTML Basics</h2>
+            <h3>H3: What is HTML?</h3>
+            <h4>H4: HTML Syntax</h4>
+            <h5>H5: Example Code</h5>
+            <h6>H6: Note about heading size</h6>
+            </div>
+            <!--Card3-->
+            <div class="card">
+            <h2>3. ถ้าอยากให้ หัวข้อ “ใหญ่กว่า”หรือ“เล็กกว่า” ขนาดเดิม?</h2>
+            <p>ใช ้CSS แทนการเลือก h1–h6 ตามลำดับ เช่น :</p>
+<pre>h3 {
+font-size: 40px; /* ทำให้ H3 ใหญ่เท่า H1 ได ้ */
+color: #c4005a;
+}
+h5 {
+font-size: 12px; /* ทำให้ H5 เล็กลงอีก */
+}
+</pre>
+            <p>หรือสามารถกำหนดเฉพาะบางหัวข้อได ้:</p>
+<pre>&lt;h3 style="font-size: 50px; color: blue;"&gt;Big Custom Heading&lt;/h3&gt;
+</pre>
+            <p class="note">จำไว้ว่าลำดับหัวข้อควรเป็น H1 → H2 → H3 ตามโครงสร้างเนื้อหาไม่ควรใช ้H5 เพื่อให้ “ตัวเล็กลง” หรือ ใช้ H1
+เพื่อให้ “ตัวใหญ่ขึ้น” → ต้องแก้ด้วย CSS เท่านั้น</p>
+            </div>
+            </main>
+            <footer>
+            <a href="index.htm">&larr; Back to HTML Tutorial</a>
+            </footer>
+            </div>
+</body>
+</html>
